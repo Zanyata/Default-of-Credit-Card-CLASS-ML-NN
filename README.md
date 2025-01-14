@@ -68,11 +68,4 @@ The dataset is sourced from the kaggle and is accessible via the following [link
    ```bash
    cd Default-of-Credit-Card
    ```
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
----
-
-For further improvements or questions, feel free to create an issue or contact the repository owner.
 
