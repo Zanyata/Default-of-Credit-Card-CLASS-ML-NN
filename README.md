@@ -1,10 +1,10 @@
 # Credit Card Default Prediction
 
 ## Project Overview
-This project focuses on predicting credit card defaults using binary classification techniques. The dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset), provides demographic, financial, and behavioral information on credit card clients.
+This project focuses on predicting credit card defaults using binary classification techniques. The dataset, sourced from Kaggle, provides demographic, financial, and behavioral information on credit card clients.
 
 ## Dataset
-The dataset is sourced from the kaggle and is accessible via the following [link]([https://archive.ics.uci.edu/dataset/109/wine](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset)).
+The dataset is sourced from the kaggle and is accessible via the following [link](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset).
 
 ## Key Features
 - **Dataset Size**: 30,000 samples and 24 features.
