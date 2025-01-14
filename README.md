@@ -9,12 +9,6 @@ The dataset is sourced from the kaggle and is accessible via the following [link
 ## Key Features
 - **Dataset Size**: 30,000 samples and 24 features.
 - **Target Variable**: `default.payment.next.month` (1 = Default, 0 = No Default).
-- **Highlights**:
-  - Exploratory Data Analysis (EDA).
-  - Preprocessing and Feature Engineering.
-  - Model Training and Evaluation (LGBM, CatBoost, Logistic Regression).
-  - Dimensionality Reduction using PCA.
-  - Handling Data Imbalance with SMOTETomek.
 
 ## Project Structure
 ```
