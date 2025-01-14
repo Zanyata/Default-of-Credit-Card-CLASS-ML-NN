@@ -47,6 +47,7 @@ The dataset is sourced from the kaggle and is accessible via the following [link
   - Logistic Regression
   - Random Forest
   - LightGBM (LGBM)
+  - XGBoost
   - CatBoost
 - Hyperparameter tuning was performed using **GridSearchCV** for the best-performing models.
 
