@@ -14,7 +14,7 @@ The dataset is sourced from the kaggle and is accessible via the following [link
 ```
 ├── data/
 │   ├── UCI_Credit_Card.csv # Original dataset
-│   └── df_prep.csv # Prepped dataset for further analysis
+│   └── df_prep.csv # Prepared dataset for further analysis
 ├── notebooks/
 │   ├── Credit_Card_Default.ipynb
 │   └── Credit_Card_Default.py
