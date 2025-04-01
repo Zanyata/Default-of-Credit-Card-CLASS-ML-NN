@@ -84,10 +84,10 @@ The dataset is sourced from the kaggle and is accessible via the following [link
 ## Installation & Usage
 1. Clone the repository:
 ```bash
-git clone https://github.com/Zanyata/Default-of-Credit-Card_CLASS-ML.git
+git clone https://github.com/Zanyata/Default-of-Credit-Card-CLASS-ML-NN
 ```
 ```bash
-cd Default-of-Credit-Card
+cd Default-of-Credit-Card-CLASS-ML-NN
 ```
 2. Install dependencies:
 ```bash
