@@ -1,73 +1,96 @@
 # Credit Card Default Prediction
 
-## Project Overview
+
+## Overview
 This project focuses on predicting credit card defaults using binary classification techniques. The dataset, sourced from Kaggle, provides demographic, financial, and behavioral information on credit card clients.
+Multiple models were benchmarked and tuned, including preprocessing strategies, feature selection (SHAP, Boruta), and dimensionality reduction (PCA, VIF). The project culminates in selecting the best model pipeline and evaluating performance across multiple metrics.
+
+
+## Table of Contents
+- [Dataset](#dataset)
+- [Data Preprocessing](#Data-Preprocessing)
+- [Models Evaluated](#Models-Evaluated)
+- [Evaluation](#Evaluation)
+- [Models Evaluated](#Models-Evaluated)
+- [Best Performing Model](#Best-Performing-Model)
+- [Project Organization](#Project-Organization)
+- [Installation & Usage](#Installation-&-Usage)
+
 
 ## Dataset
 The dataset is sourced from the kaggle and is accessible via the following [link](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset).
-
-## Key Features
-- **Dataset Size**: 30,000 samples and 24 features.
+- **Dataset Size**: 30,000 samples and 23 features.
+- **Demographic data** (e.g., age, sex, education, marriage)
+- **Financial attributes** (credit limit, bill statements, payments)
 - **Target Variable**: `default.payment.next.month` (1 = Default, 0 = No Default).
 
-## Project Structure
-```
-├── data/
-│   ├── UCI_Credit_Card.csv # Original dataset
-│   └── df_prep.csv # Prepared dataset for further analysis
-├── notebooks/
-│   ├── Credit_Card_Default.ipynb
-│   └── Credit_Card_Default.py
-├── models/
-│   ├── best_LGBM.sav # Trained LGBM model
-│   ├── best_CatBoost.sav # Trained CatBoost model
-│   └── best_logr.sav # Trained Logistic Regression model
-└──  README.md
-```
 
-## Key Steps
+## **Data Preprocessing**
 
-### 1. **Data Preprocessing**
+**Feature Engineering:**
 - Handled missing values and cleaned the dataset.
 - Standardized numerical features using `StandardScaler` for better model performance.
-- Used **SMOTE** to balance the dataset by oversampling the minority class.
 
-### 2. **Feature Engineering**
+**Feature Selection:**
+- Multicollinearity check
+- SHAP and BorutaPy
 - Applied **PCA** to reduce dimensionality and assess the impact on model performance.
-- Retained key features while exploring the effect of feature reduction.
 
-### 3. **Modeling**
-- Trained and evaluated multiple models, including:
-  - Logistic Regression
-  - Random Forest
-  - LightGBM (LGBM)
-  - XGBoost
-  - CatBoost
-- Hyperparameter tuning was performed using **GridSearchCV** for the best-performing models.
+**Data Splitting:**
+- Training, validation, and test sets created using stratified sampling.
 
-### 4. **Evaluation**
+
+## **Evaluation**
 - Evaluated models using cross-validation and metrics:
-  - **Accuracy**: Overall correctness of predictions.
+  - **Accuracy**: Overall correctness of predictions - one of the most informative metrics
   - **Precision**: Proportion of true positives among predicted positives.
   - **Recall**: Ability to detect the positive class (critical in imbalanced datasets).
-  - **F1 Score**: Harmonic mean of precision and recall.
-  - **ROC-AUC**: Area under the ROC curve to assess model discrimination ability.
+  - **F1 Score**: Harmonic mean of precision and recall - one of the most informative metrics
+  - **ROC-AUC**: Area under the ROC curve to assess model discrimination ability - one of the most informative metrics
 
-### 5. **Final Model**
-- The final model was selected based on performance across metrics and practical considerations, such as computation time.
-- The selected model's performance was checked on standard, SMOTE and PCA dataset to confirm whether the performed operations had a positive effect.
-- The selected model was evaluated on the test set for unbiased performance estimation.
+## Models Evaluated
+1. **Classification** - LightGBM, CatBoostClassifier
+2. **Neural Network**
+
+## Best Performing Model
+- **Neural Network** Best Test F1, best AUC, best accuracy
 
 
-## Installation
+
+## Project Organization
+```
+├── LICENSE                               <- Open-source license
+├── README.md                             <- Project documentation
+├── data/
+│   ├── raw                               <- Raw Data
+│   └── processed                         <- The final, canonical data sets for modeling
+│
+├── models                                <- Trained models, model predictions, or model summaries
+│
+├── notebooks                             <- Jupyter notebooks
+│   └── 1.0-Default-of-Credit-Card.ipynb  <- Code with data preprocessing and models
+│
+├── reports                               <- Generated analysis
+│   └── figures                           <- The most important generated graphics and figures
+│
+└── requirements.txt                      <- Python dependencies
+```
+
+
+## Installation & Usage
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/Zanyata/Default-of-Credit-Card.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd Default-of-Credit-Card
-   ```
-3. Install dependencies using:
-   ```bash
-   pip install -r requirements.txt
+```bash
+git clone https://github.com/Zanyata/Default-of-Credit-Card_CLASS-ML.git
+```
+```bash
+cd Default-of-Credit-Card
+```
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+3. Run Jupyter Notebook:
+```bash
+jupyter notebook
+```
+--------
