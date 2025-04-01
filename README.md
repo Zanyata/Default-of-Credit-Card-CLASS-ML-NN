@@ -25,6 +25,10 @@ The dataset is sourced from the kaggle and is accessible via the following [link
 - **Target Variable**: `default.payment.next.month` (1 = Default, 0 = No Default).
 
 
+## Correlation Matrix of Credit Risk Features: Assessing Multicollinearity
+![heatmap](reports/figures/heatmap.png)
+
+
 ## **Data Preprocessing**
 
 **Feature Engineering:**
